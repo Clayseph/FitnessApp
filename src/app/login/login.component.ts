@@ -24,7 +24,8 @@ export class LoginComponent implements OnInit {
   
   doLogin(event){
     console.log(event);
-    console.log(this.loginForm.value);
+    console.log(this.loginForm);
+  
   }
 
 
@@ -36,7 +37,7 @@ export class LoginComponent implements OnInit {
 } 
 
  function containsMagicWord(c: FormControl) {
-  if(c.value.indexOf('magic') >= 0) {
+  if(c.value.indexOf('email').equalsIgnoreCase('taco')) {
     console.log('not valid')
     return {
       noMagic: true
